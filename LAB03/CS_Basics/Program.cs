@@ -15,6 +15,12 @@ namespace CS_Basics
                 Console.WriteLine("  Лабораторная работа №3 - CS_Basics");
                 Console.WriteLine("  Основны языка програмирования C#");
                 Console.WriteLine("========================================");
+                Console.WriteLine("Блок 1. Переменные и операторы.");
+                Console.WriteLine("Блок 2. Условные операторы.");
+                Console.WriteLine("Блок 3. Циклы.");
+                Console.WriteLine("Блок 4. Массивы.");
+                Console.WriteLine("Блок 5. Функции.");
+                Console.Write("\nВыбери блок: ");
 
                 string input = Console.ReadLine() ?? "";
 
