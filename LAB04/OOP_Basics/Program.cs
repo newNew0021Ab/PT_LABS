@@ -5,9 +5,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Демонстрация работы с классом Box.\n");
         Console.OutputEncoding = UTF8Encoding.UTF8;
-
+        Console.WriteLine("Демонстрация работы с классом Box.\n");
+        
         try
         {
             // --- 1. Создание корректного объекта ---
