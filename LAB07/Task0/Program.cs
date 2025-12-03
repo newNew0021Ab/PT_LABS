@@ -51,13 +51,6 @@ try
     itDepartment.PrintDepartmentInfo();
     productionDepartment.PrintDepartmentInfo();
 
-    // Test AVERAGE SALARY
-    Console.WriteLine("\n=== AVERAGE SALARY STATISTICS ===");
-    decimal itAvg = itDepartment.GetAverageSalary();
-    Console.WriteLine($"IT Department Average Salary: {itAvg:C}");
-    decimal prodAvg = productionDepartment.GetAverageSalary();
-    Console.WriteLine($"Production Department Average Salary: {prodAvg:C}");
-
     // Test salary functionality
     Console.WriteLine("\n=== SALARY INFORMATION ===");
     Console.WriteLine("IT Department Salaries:");

@@ -162,28 +162,4 @@ public class Department
         
         return salaries;
     }
-    public decimal GetAverageSalary()
-    {
-        decimal totalSalary = 0;
-        int salariedCount = 0;
-
-        // Iterate through all employees in the list
-        foreach (var employee in employees)
-        {
-            // specific check: implies usage of Interface to identify salaried staff
-            if (employee is ISalariedEmployee salariedEmployee)
-            {
-                totalSalary += salariedEmployee.TotalSalary();
-                salariedCount++;
-            }
-        }
-
-        // Prevent division by zero exception if department has no salaried employees
-        if (salariedCount == 0)
-        {
-            return 0;
-        }
-
-        return totalSalary / salariedCount;
-    }
 }
