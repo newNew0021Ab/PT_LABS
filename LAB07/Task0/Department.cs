@@ -114,7 +114,6 @@ public class Department
         Console.WriteLine($"\n=== Отдел: {Name} ===");
         Console.WriteLine($"Всего сотрудников: {employees.Count}");
         
-        // Подсчет по типам без LINQ
         Dictionary<string, int> stats = new Dictionary<string, int>();
         for (int i = 0; i < employees.Count; i++)
         {
@@ -134,7 +133,6 @@ public class Department
             Console.WriteLine($"{stat.Key}: {stat.Value}");
         }
 
-        // Общая зарплатная ведомость
         decimal totalSalary = 0;
         for (int i = 0; i < employees.Count; i++)
         {
@@ -161,5 +159,25 @@ public class Department
         }
         
         return salaries;
+    }
+
+    // === НОВЫЙ МЕТОД (ЗАДАНИЕ 3) ===
+    public decimal GetAverageSalary()
+    {
+        decimal totalSalary = 0;
+        int count = 0;
+
+        foreach (var employee in employees)
+        {
+            // Учитываем только тех, кто получает зарплату (исключаем Trainee)
+            if (employee is ISalariedEmployee salariedEmployee)
+            {
+                totalSalary += salariedEmployee.TotalSalary();
+                count++;
+            }
+        }
+
+        // Защита от деления на ноль, если в отделе нет сотрудников с зарплатой
+        return count > 0 ? totalSalary / count : 0;
     }
 }

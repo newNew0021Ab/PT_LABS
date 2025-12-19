@@ -117,6 +117,13 @@ try
         }
     }
 
+    // === ЗАДАНИЕ 3: ПРОВЕРКА СРЕДНЕЙ ЗАРПЛАТЫ ===
+    Console.WriteLine("\n=== AVERAGE SALARY TEST ===");
+    // IT отдел содержит 1 стажера (без зарплаты), он не должен влиять на расчет средней ЗП тех, кто получает деньги
+    Console.WriteLine($"Средняя зарплата в IT Department: {itDepartment.GetAverageSalary():C}");
+    Console.WriteLine($"Средняя зарплата в Production Department: {productionDepartment.GetAverageSalary():C}");
+    // ============================================
+
     // Test property validation
     Console.WriteLine("\n=== PROPERTY VALIDATION TESTING ===");
     try
